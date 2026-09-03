@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <a class="navbar-brand" routerLink="/">
+    <span class="brand-mark">A</span>
+    <span>Auth Demo</span>
+  </a>
+
+  <div class="navbar-actions">
+    @if (isLoggedIn()) {
+      <span class="navbar-user">{{ getUsername() }}</span>
+      <button type="button" class="btn btn-outline" (click)="onLogout()">Logout</button>
+    } @else {
+      <a class="btn btn-outline" routerLink="/login">Sign In</a>
+    }
+  </div>
+</nav>

@@ -1,0 +1,40 @@
+<section class="dashboard">
+  <div class="dashboard-hero">
+    <h1>Dashboard</h1>
+    <p>{{ data?.message ?? 'Loading protected data…' }}</p>
+  </div>
+
+  @if (loading) {
+    <div class="loading-state">Fetching data from the protected endpoint…</div>
+  }
+
+  @if (errorMessage) {
+    <div class="alert alert-error" role="alert">{{ errorMessage }}</div>
+  }
+
+  @if (data) {
+    <div class="stat-grid">
+      @for (stat of data.stats; track stat.label) {
+        <div class="stat-card">
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="meta-card">
+      <div class="meta-row">
+        <span>Authenticated as</span>
+        <strong>{{ data.user }}</strong>
+      </div>
+      <div class="meta-row">
+        <span>Server time</span>
+        <strong>{{ data.serverTime }}</strong>
+      </div>
+      <div class="meta-row">
+        <span>Endpoint</span>
+        <code>GET /api/dashboard/data</code>
+      </div>
+    </div>
+  }
+</section>

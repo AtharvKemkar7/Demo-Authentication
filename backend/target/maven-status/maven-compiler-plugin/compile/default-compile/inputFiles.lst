@@ -1,0 +1,14 @@
+E:\New folder\backend\src\main\java\com\example\authbackend\AuthBackendApplication.java
+E:\New folder\backend\src\main\java\com\example\authbackend\config\DataInitializer.java
+E:\New folder\backend\src\main\java\com\example\authbackend\config\SecurityConfig.java
+E:\New folder\backend\src\main\java\com\example\authbackend\controller\AuthController.java
+E:\New folder\backend\src\main\java\com\example\authbackend\controller\DashboardController.java
+E:\New folder\backend\src\main\java\com\example\authbackend\dto\AuthResponse.java
+E:\New folder\backend\src\main\java\com\example\authbackend\dto\DashboardData.java
+E:\New folder\backend\src\main\java\com\example\authbackend\dto\LoginRequest.java
+E:\New folder\backend\src\main\java\com\example\authbackend\entity\User.java
+E:\New folder\backend\src\main\java\com\example\authbackend\repository\UserRepository.java
+E:\New folder\backend\src\main\java\com\example\authbackend\security\JwtAuthenticationFilter.java
+E:\New folder\backend\src\main\java\com\example\authbackend\security\JwtService.java
+E:\New folder\backend\src\main\java\com\example\authbackend\service\AuthService.java
+E:\New folder\backend\src\main\java\com\example\authbackend\service\UserService.java

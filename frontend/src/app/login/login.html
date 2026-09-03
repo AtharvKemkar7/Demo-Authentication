@@ -1,0 +1,40 @@
+<section class="login-page">
+  <div class="login-card">
+    <header class="login-header">
+      <h1>Welcome back</h1>
+      <p>Sign in to access the protected dashboard.</p>
+    </header>
+
+    @if (errorMessage) {
+      <div class="alert alert-error" role="alert">{{ errorMessage }}</div>
+    }
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+      <label class="form-field">
+        <span>Username</span>
+        <input
+          type="text"
+          formControlName="username"
+          autocomplete="username"
+          placeholder="Enter your username"
+        />
+      </label>
+
+      <label class="form-field">
+        <span>Password</span>
+        <input
+          type="password"
+          formControlName="password"
+          autocomplete="current-password"
+          placeholder="Enter your password"
+        />
+      </label>
+
+      <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid || loading">
+        {{ loading ? 'Signing in…' : 'Sign In' }}
+      </button>
+    </form>
+
+    <p class="login-hint">Demo credentials: admin / admin123</p>
+  </div>
+</section>
